@@ -27,16 +27,18 @@ export const LoginScreens = () => {
          login({username, password})
     } 
     
-    return <form>
+    return <form onSubmit={handleSubmit}>
         <div>
-           <label htmlFor="username"></label>
+           <label htmlFor="username">用户名</label>
            <input type="text" id={'username'} />
         </div>
-        <label htmlFor="password"></label>
-           <input type="password" id={'password'} />
+        
         <div>
-
+        <label htmlFor="password">密码</label>
+           <input type="password" id={'password'} />
         </div>
+        密码
+        <input type="submit" ></input>
     </form>
  
 }
