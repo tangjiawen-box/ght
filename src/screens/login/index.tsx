@@ -8,10 +8,9 @@ export const LoginScreens = () => {
         fetch(`${apiUrl}/login`, {
             method: "POST",
             headers: {
-                "content-type": "application/json",
+                'content-type': 'application/josn'
             },
-            body: JSON.stringify(param)
-
+            body : JSON.stringify(param)
             
         }).then(async response => {
             if (response.ok) {
@@ -27,16 +26,17 @@ export const LoginScreens = () => {
         const password =(event.currentTarget.elements[1] as HTMLInputElement). value
          login({username, password})
     } 
+    
+    return <form>
+        <div>
+           <label htmlFor="username"></label>
+           <input type="text" id={'username'} />
+        </div>
+        <label htmlFor="password"></label>
+           <input type="password" id={'password'} />
+        <div>
 
-    return <form onSubmit={handleSubmit}>
-       <div>
-          <label htmlFor="username">用户名</label>
-          <input type="text" id={'username'}></input>
-       </div>
-       <div>
-          <label htmlFor="password">密码</label>
-          <input type="password" id={'password'}></input>
-       </div>
-       <button type="submit">提交</button>
+        </div>
     </form>
+ 
 }
