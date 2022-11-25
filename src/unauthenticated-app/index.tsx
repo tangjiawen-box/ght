@@ -6,7 +6,7 @@ import React from "react";
 
 
 export const UnauthenticatedApp = () => {
-  const [register, setregister] = useState(false)
+  const [register, setregister] = useState(true)
   return  <div>
     {
     register ? <RegisterScreens/> : <LoginScreens/>
